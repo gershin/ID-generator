@@ -1,5 +1,5 @@
-const create = document.getElementById("create");
-create.addEventListener("click", getValue);
+// const create = document.getElementById("create");
+// create.addEventListener("click", getValue);
 
 export function getValue() {
   //input
@@ -18,7 +18,15 @@ export function getValue() {
   name.innerHTML = "Name: " + Uname.toUpperCase();
   position.innerHTML = "Position: " + Uposition.toUpperCase();
   email.innerHTML = "Email: " + Uemail.toUpperCase();
-  phonenumber.innerHTML = "#: " + Upnum.toUpperCase();
+  phonenumber.innerHTML = "#: " + Upnum;
 
   document.getElementById("result").style.visibility = "visible";
 }
+
+export function onButton() {
+  const create = document.getElementById("create");
+  create.addEventListener("click", getValue);
+}
+document.addEventListener("DOMContentLoaded", function () {
+  onButton();
+});
